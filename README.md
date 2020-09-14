@@ -16,3 +16,37 @@ MONGO_URL: "mongodb://mongodb:27017/genenotebook"
 NODE_OPTIONS: "--max-old-space-size=8192"
 RUN_MODE: "prod" # or "dev"
 ```
+
+## Default accounts
+
+Default user accounts are created on first startup. They can be configured by creating a settings.json file and mounting it in the container.
+
+The default settings.json is like that:
+
+
+```
+{
+    "accounts": [
+        {
+            "username": "admin",
+            "email": "admin@admin.com",
+            "password": "admin",
+            "profile": {
+                "first_name": "admin",
+                "last_name": "admin"
+            },
+            "role": "admin"
+        },
+        {
+            "username": "guest",
+            "email": "guest@guest.com",
+            "password": "guest",
+            "profile": {
+                "first_name": "guest",
+                "last_name": "guest"
+            },
+            "role": "registered"
+        }
+    ]
+}
+```

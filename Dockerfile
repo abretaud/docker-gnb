@@ -31,9 +31,6 @@ RUN mkdir /genenotebook && \
     curl -L https://github.com/genenotebook/genenotebook/archive/${GNB_VERSION}.tar.gz | \
 	tar xzf - --strip-components=1 -C /genenotebook
 
-COPY launch.sh /launch.sh
-ENV RUN_MODE=prod
-
 WORKDIR /genenotebook
 
 # TODO add tail to package.json upstream
@@ -41,5 +38,8 @@ RUN npm install --unsafe-perm \
     && npm install tail
 
 RUN METEOR_ALLOW_SUPERUSER=1 METEOR_DISABLE_OPTIMISTIC_CACHING=1 npm run bundle
+
+COPY launch.sh /launch.sh
+ENV RUN_MODE=prod
 
 CMD ["/launch.sh"]

@@ -9,6 +9,5 @@ then
 
 else
 
-  cd /genenotebook/genenotebook_${GNB_VERSION_DIR}
-  ./genenotebook run --mongo-url $MONGO_URL
+  ./genenotebook_*/genenotebook run --mongo-url $MONGO_URL
 fi
