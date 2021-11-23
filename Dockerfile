@@ -24,8 +24,8 @@ RUN curl "https://install.meteor.com/?release=${METEOR_VERSION}" | /bin/sh
 
 ENV PATH=$PATH:/root/.meteor
 
-ENV GNB_VERSION v0.3.0
-ENV GNB_VERSION_DIR v0.3.0
+#ENV GNB_VERSION v0.3.0
+ENV GNB_VERSION master
 
 RUN mkdir /genenotebook && \
     curl -L https://github.com/genenotebook/genenotebook/archive/${GNB_VERSION}.tar.gz | \
