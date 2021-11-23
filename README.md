@@ -22,7 +22,7 @@ RUN_MODE: "prod" # or "dev"
 The image is not yet on quay.io, to build it locally run this:
 
 ```
-docker build -t quay.io/abretaud/genenotebook:v0.3.0 .
+docker build -t quay.io/abretaud/genenotebook:master .
 ```
 
 ## Default accounts
