@@ -33,6 +33,8 @@ RUN mkdir /genenotebook && \
 
 WORKDIR /genenotebook
 
+COPY settings.json settings.json
+
 # TODO add tail to package.json upstream
 RUN npm install --unsafe-perm \
     && npm install tail

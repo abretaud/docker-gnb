@@ -2,6 +2,7 @@ version: '3.7'
 services:
   genenotebook:
     image: quay.io/abretaud/genenotebook:master
+    build: .
     ports:
       - 3000:3000
     depends_on:
@@ -14,7 +15,6 @@ services:
       - ../genenotebook/scripts/:/genenotebook/scripts/:ro
       - ../genenotebook/server/:/genenotebook/server/:ro
       - ../genenotebook/tests/:/genenotebook/tests/:ro
-      - ../genenotebook/settings.json:/genenotebook/settings.json:ro
       - ../genenotebook/package.json:/genenotebook/package.json:ro
     environment:
       NODE_OPTIONS: "--max-old-space-size=8192"
