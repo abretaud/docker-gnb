@@ -31,6 +31,8 @@ RUN mkdir /genenotebook && \
     curl -L https://github.com/genenotebook/genenotebook/archive/${GNB_VERSION}.tar.gz | \
 	tar xzf - --strip-components=1 -C /genenotebook
 
+COPY settings.json /genenotebook/
+
 WORKDIR /genenotebook
 
 # TODO add tail to package.json upstream
