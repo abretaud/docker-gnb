@@ -13,6 +13,8 @@ Env vars:
 
 ```
 MONGO_URL: "mongodb://mongodb:27017/genenotebook"
+DB_PATH: "/data/db" (mutually exclusive with MONGO_URL
+ROOT_URL: Default to "http://localhost"
 NODE_OPTIONS: "--max-old-space-size=8192"
 RUN_MODE: "prod" # or "dev"
 ```
