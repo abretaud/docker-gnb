@@ -13,7 +13,9 @@ else
 
   if [[ ! -z "$MONGO_URL" ]]
   then
-    ./genenotebook_*/genenotebook run --mongo-url $MONGO_URL --root-url ROOT_URL
+    ./genenotebook_*/genenotebook run --mongo-url $MONGO_URL --root-url $ROOT_URL
+  elif [[ ! -z "$DB_PATH" ]]
+    ./genenotebook_*/genenotebook run --db-path $DB_PATH --root-url $ROOT_URL
   else
-    ./genenotebook_*/genenotebook run --db-path $DB_PATH --root-url ROOT_URL
+    ./genenotebook_*/genenotebook run --root-url $ROOT_URL
 fi
