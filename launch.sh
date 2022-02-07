@@ -2,6 +2,8 @@
 
 cd /genenotebook
 
+ROOT_URL="${ROOT_URL:-http://localhost}"
+
 if [[ $RUN_MODE == "dev" ]]
 then
 
@@ -9,5 +11,9 @@ then
 
 else
 
-  ./genenotebook_*/genenotebook run --mongo-url $MONGO_URL
+  if [[ ! -z "$MONGO_URL" ]]
+  then
+    ./genenotebook_*/genenotebook run --mongo-url $MONGO_URL --root-url ROOT_URL
+  else
+    ./genenotebook_*/genenotebook run --db-path $DB_PATH --root-url ROOT_URL
 fi
