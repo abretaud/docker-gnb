@@ -11,7 +11,7 @@ services:
       - ./data/refdata:/data/refdata
       - ../genenotebook/client/:/genenotebook/client/:ro
       - ../genenotebook/cli/:/genenotebook/cli/:ro
-      - ../genenotebook/cli/genenotebook:/genenotebook/genenotebook_v0.3.0/genenotebook:ro
+      - ../genenotebook/cli/genenotebook.js:/genenotebook/genenotebook_v0.3.1-0/genenotebook:ro
       - ../genenotebook/imports/:/genenotebook/imports/:ro
       - ../genenotebook/public/:/genenotebook/public/:ro
       - ../genenotebook/scripts/:/genenotebook/scripts/:ro
