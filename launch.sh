@@ -6,11 +6,8 @@ ROOT_URL="${ROOT_URL:-http://localhost}"
 
 if [[ $RUN_MODE == "dev" ]]
 then
-
   npm run dev
-
 else
-
   if [[ ! -z "$MONGO_URL" ]]
   then
     ./genenotebook_*/genenotebook run --mongo-url $MONGO_URL --root-url $ROOT_URL
