@@ -4,7 +4,7 @@ MAINTAINER Anthony Bretaudeau <anthony.bretaudeau@inrae.fr>
 
 EXPOSE 3000
 
-ENV METEOR_VERSION=2.4
+ENV METEOR_VERSION=2.5.6
 ENV LC_ALL=POSIX
 ENV METEOR_ALLOW_SUPERUSER=1
 
@@ -24,14 +24,12 @@ RUN curl "https://install.meteor.com/?release=${METEOR_VERSION}" | /bin/sh
 
 ENV PATH=$PATH:/root/.meteor
 
-#ENV GNB_VERSION v0.3.0
-ENV GNB_VERSION master
+ENV GNB_VERSION v0.3.1
+#ENV GNB_VERSION master
 
 RUN mkdir /genenotebook && \
     curl -L https://github.com/genenotebook/genenotebook/archive/${GNB_VERSION}.tar.gz | \
 	tar xzf - --strip-components=1 -C /genenotebook
-
-COPY settings.json /genenotebook/
 
 WORKDIR /genenotebook
 
