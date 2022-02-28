@@ -11,13 +11,12 @@ services:
       - ./data/refdata:/data/refdata
       - ../genenotebook/client/:/genenotebook/client/:ro
       - ../genenotebook/cli/:/genenotebook/cli/:ro
-      - ../genenotebook/cli/genenotebook.js:/genenotebook/genenotebook_v0.3.1-0/genenotebook:ro
+      - ../genenotebook/cli/genenotebook.js:/genenotebook/genenotebook_v0.3.1/genenotebook:ro
       - ../genenotebook/imports/:/genenotebook/imports/:ro
       - ../genenotebook/public/:/genenotebook/public/:ro
       - ../genenotebook/scripts/:/genenotebook/scripts/:ro
       - ../genenotebook/server/:/genenotebook/server/:ro
       - ../genenotebook/tests/:/genenotebook/tests/:ro
-      - ../genenotebook/package.json:/genenotebook/package.json:ro
     environment:
       NODE_OPTIONS: "--max-old-space-size=8192"
       MONGO_URL: "mongodb://mongodb:27017/genenotebook"
