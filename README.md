@@ -36,6 +36,12 @@ docker-compose -f docker-compose.dev.yml up
 ```
 
    * Handling node modules with docker-compose.
+   
+To run a bash console in the container : 
+
+``` sh
+docker-compose exec genenotebook bash
+```
 
 ## Default accounts
 
