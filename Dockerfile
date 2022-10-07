@@ -1,4 +1,4 @@
-FROM node:14-buster-slim
+FROM node:18-buster-slim
 
 MAINTAINER Anthony Bretaudeau <anthony.bretaudeau@inrae.fr>
 
