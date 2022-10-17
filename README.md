@@ -27,6 +27,22 @@ The image is not yet on quay.io, to build it locally run this:
 docker build -t quay.io/abretaud/genenotebook:master .
 ```
 
+### Development
+
+To run an image for development :
+
+``` sh
+docker-compose -f docker-compose.dev.yml up
+```
+
+   * Handling node modules with docker-compose.
+   
+To run a bash console in the container : 
+
+``` sh
+docker-compose exec genenotebook bash
+```
+
 ## Default accounts
 
 Default user accounts are created on first startup. They can be configured by creating a settings.json file and mounting it in the container.
